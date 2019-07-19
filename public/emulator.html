@@ -31,11 +31,15 @@
 </div>
 
 <script type="text/javascript">
-	var socket = io();
+	const loc = window.location.pathname;
+	const uri = loc.substr(0, loc.indexOf('/', 1)) + '/socket.io';
+	var socket = io({
+		path: uri,
+	});
 	var $canvas = $('#streamdeck');
 	var ctx = $canvas[0].getContext('2d');
 	var bg = new Image(638, 503);
-	bg.src = '/img/streamdeck.png';
+	bg.src = 'img/streamdeck.png';
 	bg.onload = resetbg;
 
 	socket.on('connect', function () {

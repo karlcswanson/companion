@@ -165,10 +165,10 @@ system.on('skeleton-ready', function() {
 	var elgatoDM   = require('./lib/elgato_dm')(system);
 	var preview    = require('./lib/preview')(system);
 	var instance   = require('./lib/instance')(system);
-	var osc        = require('./lib/osc')(system);
+	// var osc        = require('./lib/osc')(system);
 	var server_api = require('./lib/server_api')(system);
-	var server_tcp = require('./lib/server_tcp')(system);
-	var server_udp = require('./lib/server_udp')(system);
+	// var server_tcp = require('./lib/server_tcp')(system);
+	// var server_udp = require('./lib/server_udp')(system);
 	var artnet     = require('./lib/artnet')(system);
 	var rest       = require('./lib/rest')(system);
 	var rest_poll  = require('./lib/rest_poll')(system);

@@ -17,7 +17,12 @@
 
 var MAX_BUTTONS = 32;
 
-var socket = new io();
+const loc = window.location.pathname;
+const uri = loc.substr(0, loc.indexOf('/', 1)) + '/socket.io';
+
+var socket = new io({
+	path: uri,
+});
 var image_cache = {};
 var buttons_hot = false;
 var buttons_functional = false;

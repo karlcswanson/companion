@@ -92,7 +92,12 @@
 			e.preventDefault();
 	});
 
-	var socket = io();
+	const loc = window.location.pathname;
+	const uri = loc.substr(0, loc.indexOf('/', 1)) + '/socket.io';
+
+	var socket = io({
+		path: uri,
+	});
 	var config = {};
 	var cache = {};
 	var been_connected = false;
